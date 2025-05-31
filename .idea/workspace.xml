@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/age/src/main/java/com/neopragma/age/Age.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/age/src/test/java/com/neopragma/age/AgeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpngui/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpngui/src/main/java/com/neopragma/rpngui/RPN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpngui/src/main/java/com/neopragma/rpngui/RPNGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

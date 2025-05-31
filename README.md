@@ -1,4 +1,4 @@
-# Unit testing and test-driven development in Python
+# Unit testing and test-driven development in Java
 
 ## Walkthrough 
 
@@ -75,21 +75,14 @@ java -jar target/rpnconsole-1.0.0.jar
 
 ### Run the calculator with the GUI front-end 
 
+```shell 
+cd rpnconsole 
+java -jar target/rpngui-1.0.0.jar
+```
+
 
 ###---------- resume here ----------
 
-
-Might need to do this first:
-
-```shell 
-python3 -m pip install PyQt6
-``` 
-
-Run the app:
-
-```shell 
-python3 src/rpn_gui.py 
-``` 
 
 ## Mocking dependencies, refactoring
 
