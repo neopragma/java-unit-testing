@@ -76,7 +76,7 @@ java -jar target/rpnconsole-1.0.0.jar
 ### Run the calculator with the GUI front-end 
 
 ```shell 
-cd rpnconsole 
+cd rpngui 
 java -jar target/rpngui-1.0.0.jar
 ```
 
