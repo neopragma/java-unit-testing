@@ -1,0 +1,7 @@
+mvn test
+
+mvn package
+
+mvn deploy:deploy-file -DgroupId=com.neopragma -DartifactId=rpn -Dversion=1.0.0 -Durl=file:../local-maven-repo -DrepositoryId=local-maven-repo -DupdateReleaseInfo=true -Dfile=target/rpn-1.0.0.jar
+
+java -jar target/rpnconsole-1.0.0.jar
