@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/foodie-solution/src/test/resources/foodie.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/presentation-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodie-solution/FoodRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodie-solution/FoodStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodie-solution/Foodie.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/Foodie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/snippets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/snippets.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

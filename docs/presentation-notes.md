@@ -330,15 +330,17 @@ _These ideas are provided to help get things moving along in class, if necessary
 
 The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-1/```. 
 
-1. The constructor in ```Foodie.java``` creates the ```HttpRequest``` object to call the API. It is clumsy to isolate this logic to facilitate unit testing. In the sample solution, the logic is extracted into method ```createRequest()```, and the constructor calls that method. This is still suboptimal. We need a do-nothing constructor for ```Foodie``` with ```package``` visibility so that we can exercise the ```createRequest()``` method in test cases. 
+1. The constructor in ```Foodie.java``` creates the ```HttpRequest``` object to call the API. It is clumsy to isolate this logic to facilitate unit testing. In the sample solution, the logic is extracted into method ```createRequest()```, and the constructor calls that method. We need a do-nothing constructor for ```Foodie``` with ```package``` visibility so that we can exercise the ```createRequest()``` method in test cases. This is still suboptimal, but it is a reasonable first step.
 
-1. Added unit test cases for the ```createRequest()``` method in ```Foodie```. 
+1. Added unit test cases for the ```createRequest()``` method in ```Foodie```. There are a couple of points to highlight for class participants. (1) We are not creating one test class for each production class. We are creating a test class for a concern or functional aspect of the solution, even if that concern is supported in multiple production classes. The first concern we're looking at is the functionality related to calling the external API. 
 
 #### Step 2 - externalize the URI for the food information API 
 
 The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-2/```.
 
-1. The hard-coded URI string in ```Foodie.java``` (named ```baseURLString```) could be externalized. The sample solution defines a Java property for this in ```src/[main|test]/resources/foodie.properties```, property name ```base.uri```. Method ```createRequest()``` reads this property. 
+1. The hard-coded URI string in ```Foodie.java``` (named ```baseURLString```) could be externalized. We'll define a Java property for this in ```src/[main|test]/resources/foodie.properties```, property name ```base.uri```. Method ```createRequest()``` will then read this property to get the URI string.
+
+Points to bring out for class participants: (1) Externalizing this value makes it possible to change it without having to re-build and re-package the entire application. (2) Externalizing the value enables us to inject test values in our test cases to exercise the production code more thoroughly. Otherwise, we would have to modify the production code in between tests, which would make it impractical to automate the test suite.
 
 
 
