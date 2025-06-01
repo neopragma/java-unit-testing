@@ -131,23 +131,32 @@ To quit the sqlite3 repl:
 sqlite> .quit
 ```
 
+### Build the executable jar for foodie 
+
+```shell
+cd foodie
+mvn clean compile assembly:single
+```
+
+### Run the starter code for foodie 
+
+```shell 
+cd [project-root]/foodie
+
+java -jar target/foodrun-jar-with-dependencies "0 44300 00012 4"
+```
+
+If the UPC code is no longer valid, look for another one here: https://www.upcitemdb.com/upc/44300000124. The sample code doesn't depend on any particular food item, provided the description matches the format used by the API, https://world.openfoodfacts.org/api/v0/product/.
+
+Examine ```Foodie.java```, ```FoodStorage.java```, and ```FoodRun.java``` and think about how you might isolate different parts of the code for automated checking ("testing"). You will have to do some refactoring to enable this. A sample solution is provided under ```foodie/solution``` (presenter's version of the repo). 
+
 
 ###---------- resume here ----------
 
 
 
 
-### Run the starter code for foodie 
 
-```shell 
-cd [project-root]/foodie/starter 
-
-python3 food_run.py '0 44300 00012 4'
-```
-
-If the UPC code is no longer valid, look for another one here: https://www.upcitemdb.com/upc/44300000124. The sample code doesn't depend on any particular food item, provided the description matches the format used by the API, https://world.openfoodfacts.org/api/v0/product/.
-
-Examine ```food_run.py```, ```foodie.py```, and ```food_storage.py``` and think about how you might isolate different parts of the code for automated checking ("testing"). You will have to do some refactoring to enable this. A sample solution is provided under ```foodie/solution```. 
 
 ### Create a "golden master" for Approval Testing
 

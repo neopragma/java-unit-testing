@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/presentation-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie/src/main/java/com/neopragma/foodie/FoodRun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie/src/main/java/com/neopragma/foodie/FoodStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie/src/main/java/com/neopragma/foodie/Foodie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/food4thot" beforeDir="false" afterPath="$PROJECT_DIR$/data/food4thot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +31,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -35,6 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.FoodRun.executor": "Run",
     "Application.RPNConsole.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -56,11 +66,30 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="FoodRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.neopragma.foodie.FoodRun" />
+      <module name="foodie" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;0 44300 00012 4&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neopragma.foodie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.FoodRun" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
