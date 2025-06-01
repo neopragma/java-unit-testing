@@ -302,6 +302,26 @@ An all-too-common situation is that we must make changes to an existing code bas
 
 Once we have a few tests in place, it becomes easier to work with the code. But initially, it may not be clear how we can _begin_ to work with the code. 
 
+## Foodie: Legacy Code with Multiple Concerns 
+
+Quite often, when unit tests are written after the production code - or when they're never written at all - the production code tends to violate one of the most fundamental software design principles of all - separation of concerns. Different concerns are jumbled together in the same source units.
+
+Code like this can be difficult to unit test unless we break out the different concerns and/or set up a lot of mocks and stubs to fake out the portions of the code that aren't of interest to each particular test case.
+
+In the ```foodie``` module, take a look at the Java source files ```Foodie.java```, ```FoodStorage.java```, and ```FoodRun.java```. Think about how you might set up isolated unit tests for this code.
+
+_Facilitate a discussion._
+
+See if you can refactor the code to make it easier to unit test.
+
+_Let participants work on this a while. They don't necessarily have to finish._
+
+_Facilitate a discussion about how easy or hard they found it to get meaningful unit test cases around the code._
+
+_Guide them toward thinking about the value of unit testing code like that, which consists mainly of interactions with external services - a network API and a database adapter. Bring Dude's Law into the picture and see if participants consider it worthwhile to write unit tests that only verify that the SUT made certain calls. Maybe it is, maybe it isn't._
+
+_Note: Your version of the repo has a module named ```foodie-solution``` that contains refactored foodie code and a sample unit test case for the API call. If they didn't get much done on their own, you can use this sample solution to support the discussion._
+
 ## Resources for Working with Existing Codebases 
 
 There are a lot of resources online and in print to help us with this problem. Here are a couple of the best ones. 
