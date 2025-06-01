@@ -320,7 +320,27 @@ _Facilitate a discussion about how easy or hard they found it to get meaningful 
 
 _Guide them toward thinking about the value of unit testing code like that, which consists mainly of interactions with external services - a network API and a database adapter. Bring Dude's Law into the picture and see if participants consider it worthwhile to write unit tests that only verify that the SUT made certain calls. Maybe it is, maybe it isn't. One thing to consider is that test cases like these are implementation-aware and therefore can't be relied on as a safety net for refactoring._
 
-_Note: Your version of the repo has a module named ```foodie-solution``` that contains refactored foodie code and a sample unit test case for the API call. If they didn't get much done on their own, you can use this sample solution to support the discussion._
+_Note: Your version of the repo has a module named ```foodie-solution``` that contains refactored foodie code and a sample unit test case for the API call. If they didn't get much done on their own, you can use this sample solution to support the discussion._ 
+
+### Some ideas for refactoring foodie 
+
+_These ideas are provided to help get things moving along in class, if necessary. You are free to approach the code in your own way. If you want to demonstrate the changes as they are documented here, you can copy the relevant versions of the files for each step from the ```copy-paste``` directory into ```src/main/java```, ```src/test/java```, ```src/main/resources```, and ```src/test/resources```; or you can make the changes live, or guide participants in doing so._ 
+
+#### Step 1 - enable unit testing of the logic to create the HttpRequest object
+
+The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-1/```. 
+
+1. The constructor in ```Foodie.java``` creates the ```HttpRequest``` object to call the API. It is clumsy to isolate this logic to facilitate unit testing. In the sample solution, the logic is extracted into method ```createRequest()```, and the constructor calls that method. This is still suboptimal. We need a do-nothing constructor for ```Foodie``` with ```package``` visibility so that we can exercise the ```createRequest()``` method in test cases. 
+
+1. Added unit test cases for the ```createRequest()``` method in ```Foodie```. 
+
+#### Step 2 - externalize the URI for the food information API 
+
+The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-2/```.
+
+1. The hard-coded URI string in ```Foodie.java``` (named ```baseURLString```) could be externalized. The sample solution defines a Java property for this in ```src/[main|test]/resources/foodie.properties```, property name ```base.uri```. Method ```createRequest()``` reads this property. 
+
+
 
 ## Resources for Working with Existing Codebases 
 

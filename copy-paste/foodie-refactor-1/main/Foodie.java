@@ -1,7 +1,6 @@
-package com.neopragma.foodie;
+package com.neopragma.foodiesolution;
 
 import java.io.IOException;
-import java.net.ConnectException;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
@@ -12,17 +11,13 @@ import java.nio.charset.StandardCharsets;
 public class Foodie {
 
     private final String baseURLString = "https://world.openfoodfacts.org/api/v0/product/%s";
-    private final HttpRequest request;
+    private HttpRequest request = null;
 
-    public Foodie(String productCode) {
-        this.request = HttpRequest.newBuilder()
-                .uri(URI.create(
-                        String.format(baseURLString,
-                                URLEncoder.encode(productCode, StandardCharsets.UTF_8)
-                        )))
-                .GET()
-                .build();
+    Foodie(String productCode) {
+        this.request = createRequest(productCode);
     }
+
+    protected Foodie() {}
 
     public String getProductInfo() {
         String body = null;
@@ -39,4 +34,17 @@ public class Foodie {
         }
         return body;
     }
+
+    HttpRequest createRequest(String productCode) {
+        final HttpRequest request;
+        request = HttpRequest.newBuilder()
+                .uri(URI.create(
+                        String.format(baseURLString,
+                                URLEncoder.encode(productCode, StandardCharsets.UTF_8)
+                        )))
+                .GET()
+                .build();
+        return request;
+    }
+
 }

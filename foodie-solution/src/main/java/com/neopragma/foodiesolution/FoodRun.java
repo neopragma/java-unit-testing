@@ -1,4 +1,4 @@
-package com.neopragma.foodie;
+package com.neopragma.foodiesolution;
 
 public class FoodRun {
 

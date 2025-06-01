@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/foodie/src/main/java/com/neopragma/foodie/FoodRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie/src/main/java/com/neopragma/foodie/FoodStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/foodie/src/main/java/com/neopragma/foodie/Foodie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-solution/src/test/resources/foodie.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food4thot" beforeDir="false" afterPath="$PROJECT_DIR$/data/food4thot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/presentation-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodie-solution/FoodRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodie-solution/FoodStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodie-solution/Foodie.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/Foodie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/snippets.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +50,7 @@
   "keyToString": {
     "Application.FoodRun.executor": "Run",
     "Application.RPNConsole.executor": "Run",
+    "JUnit.FoodieApiTests.the_HttpRequest_specifies_HTTP_version_1_1.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -62,10 +67,11 @@
       <recent name="$PROJECT_DIR$/rpngui" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.neopragma.foodiesolution" />
       <recent name="com.neopragma.rpngui" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.FoodieApiTests.the_HttpRequest_specifies_HTTP_version_1_1">
     <configuration name="FoodRun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.neopragma.foodie.FoodRun" />
       <module name="foodie" />
@@ -80,6 +86,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FoodieApiTests.the_HttpRequest_specifies_HTTP_version_1_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="foodie-solution" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.neopragma.foodiesolution.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.neopragma.foodiesolution" />
+      <option name="MAIN_CLASS_NAME" value="com.neopragma.foodiesolution.FoodieApiTests" />
+      <option name="METHOD_NAME" value="the_HttpRequest_specifies_HTTP_version_1_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -87,6 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FoodieApiTests.the_HttpRequest_specifies_HTTP_version_1_1" />
         <item itemvalue="Application.FoodRun" />
       </list>
     </recent_temporary>

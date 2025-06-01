@@ -41,7 +41,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.neopragma.foodie.FoodRun</mainClass>
+                            <mainClass>com.neopragma.foodiesolution.FoodRun</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

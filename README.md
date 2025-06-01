@@ -150,22 +150,22 @@ If the UPC code is no longer valid, look for another one here: https://www.upcit
 
 Examine ```Foodie.java```, ```FoodStorage.java```, and ```FoodRun.java``` and think about how you might isolate different parts of the code for automated checking ("testing"). You will have to do some refactoring to enable this. A sample solution is provided under ```foodie/solution``` (presenter's version of the repo). 
 
+### Create a "golden master" for Approval Testing
+
+If you want to use the Approval Testing approach when refactoring the 'foodie' code, you can run this script to produce a Golden Master file:
+
+```shell 
+cd [project-root/foodie]
+/run.sh > golden-master.txt 
+```
+
+
 
 ###---------- resume here ----------
 
 
 
 
-
-
-### Create a "golden master" for Approval Testing
-
-If you want to use the Approval Testing approach when refactoring the 'foodie' code, you can run this script:
-
-```shell 
-cd [project-root/foodie/starter/]
-/run.sh > golden_master.txt 
-```
 
 ### Run the property-based tests 
 

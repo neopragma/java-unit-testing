@@ -1,0 +1,7 @@
+Product Id: 0 44300 00012 4
+Product Status: product found
+- bean
+- refried
+Main Ingredient: pinto-beans
+Processing: cooked
+Is Vegan? Yes

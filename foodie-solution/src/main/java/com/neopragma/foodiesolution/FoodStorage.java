@@ -1,4 +1,4 @@
-package com.neopragma.foodie;
+package com.neopragma.foodiesolution;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
