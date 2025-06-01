@@ -304,7 +304,7 @@ Once we have a few tests in place, it becomes easier to work with the code. But 
 
 ## Foodie: Legacy Code with Multiple Concerns 
 
-Quite often, when unit tests are written after the production code - or when they're never written at all - the production code tends to violate one of the most fundamental software design principles of all - separation of concerns. Different concerns are jumbled together in the same source units.
+Quite often, when unit tests are written after the production code - or when they're never written at all - the production code tends to violate one of the most fundamental software design principles of all - separation of concerns. Different concerns are jumbled together in the same source units. This leads to poor cohesion and tight coupling.
 
 Code like this can be difficult to unit test unless we break out the different concerns and/or set up a lot of mocks and stubs to fake out the portions of the code that aren't of interest to each particular test case.
 
@@ -318,7 +318,7 @@ _Let participants work on this a while. They don't necessarily have to finish._
 
 _Facilitate a discussion about how easy or hard they found it to get meaningful unit test cases around the code._
 
-_Guide them toward thinking about the value of unit testing code like that, which consists mainly of interactions with external services - a network API and a database adapter. Bring Dude's Law into the picture and see if participants consider it worthwhile to write unit tests that only verify that the SUT made certain calls. Maybe it is, maybe it isn't._
+_Guide them toward thinking about the value of unit testing code like that, which consists mainly of interactions with external services - a network API and a database adapter. Bring Dude's Law into the picture and see if participants consider it worthwhile to write unit tests that only verify that the SUT made certain calls. Maybe it is, maybe it isn't. One thing to consider is that test cases like these are implementation-aware and therefore can't be relied on as a safety net for refactoring._
 
 _Note: Your version of the repo has a module named ```foodie-solution``` that contains refactored foodie code and a sample unit test case for the API call. If they didn't get much done on their own, you can use this sample solution to support the discussion._
 
