@@ -27,6 +27,10 @@ This repo supports a presentation and workshop. Some notes about running the exa
 
 Some commands are saved under ```snippets.txt``` so you can copy/paste them into the command line if you wish.
 
+### Install dependencies 
+
+Within each module's top-level subdirectory, run ```mvn clean install``` to download the dependencies for that module.
+
 ### Run the unit tests for the Age module
 
 ```shell 
@@ -80,10 +84,6 @@ cd rpngui
 java -jar target/rpngui-1.0.0.jar
 ```
 
-
-###---------- resume here ----------
-
-
 ## Mocking dependencies, refactoring
 
 The sample code calls a public API and uses the result to insert data into a local sqlite3 database. 
@@ -93,7 +93,7 @@ The sample code calls a public API and uses the result to insert data into a loc
 If necessary, create the database. 
 
 ```shell
-> cd [project root]/foodie
+> cd [project root]
 > sqlite3 data/food4thot 
 sqlite> .databases 
 ``` 
@@ -113,11 +113,29 @@ sqlite> .quit
 To initialize the test database:
 
 ```shell 
-cd [project-root]/foodie
-sqlite3 food4thot < data/init_db.sql 
+cd [project-root]
+sqlite3 data/food4thot < init_db.sql 
+sqlite3 data/food4thot 
+sqlite> select * from food_items;
 ``` 
 
-##-------- tbd ----------
+Expect to see:
+
+```shell
+1|1234567890|found|['bean', 'refried']|stuff|overprocessed|0|2025-06-01 01:54:35 
+``` 
+
+To quit the sqlite3 repl:
+
+```shell
+sqlite> .quit
+```
+
+
+###---------- resume here ----------
+
+
+
 
 ### Run the starter code for foodie 
 
