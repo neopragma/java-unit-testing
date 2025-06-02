@@ -360,18 +360,33 @@ Points to bring out for class participants:
 
 3. We also have to modify ```FoodRun``` to instantiate ```FoodieConfig``` and pass it to ```Foodie```. This change forces us to add logic to ```FoodieConfig``` for the default case, when it reads the properties file. We can't write a proper unit test case for this because the test case must access the external resource in order to be meaningful. So this is a situation where we choose to write production code before writing test cases. 
 
-#### Step 3 - 
+#### Step 3 - unit testing the persistence concern 
+
+The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-3/```.
+
+Looking at the ```FoodStorage``` class, we see a hard-coded value for the database connection string. This can be a configuration value instead. This is important because when the application is deployed to production (assuming it was a real application) a different connection string is likely to be used. 
+
+We also see an _apparent_ violation of _separation of concerns_ in that there is logic in method ```store()``` to set up the INSERT call by parsing a JSON document and logic in method ```retrieve()``` to extract the values from the ResultSet into a String array. I think it's fair to say that logic is closely related to the persistence mechanism in use, and isn't really "business logic" as such. 
+
+We can conclude there is no violation of _separation of concerns_ here, and class ```FoodStorage``` is effectively a Data Access Object (DAO). So we want to consider how to write unit tests for the ```store()``` and ```retrieve()``` methods that don't access a real database - and what, exactly, we can check for that would be worth the effort.
+
+_Ask participants what they think would be useful to check in the store() method. They might suggest that we can verify the INSERT statement is built correctly. There are two issues with that: (1) the method doesn't return anything we can assert against, and there isn't a compelling reason to make it do so; (2) if the persistence mechanism changes, our test cases will break even though the application's behavior has not changed. That means the test cases would be fragile._
+
+Since sqlite gives us the option to use an in-memory database, we can check the ```store()``` method by passing a test connection string to the ```FoodStorage``` constructor, running the ```store()``` method as-is from a test case, and then selecting the row from within the test case to validate the values. 
+
+To check the ```retrieve()``` method we can do the same in reverse: Populate an in-memory database from within the test case, then instantiate ```FoodStorage``` with the test connection string, call ```retrieve()``` as-is, and validate the contents of the resulting String array. 
+
+What we _don't_ want to do is depend on our tests for ```store()``` to set up the preconditions of our tests for ```retrieve()```. Unit test cases must be independent and runnable in any order. 
+
+1. We add a property to ```foodie.properties``` to hold the database connection string. Under ```src/main/resources``` the value is ```jdbc:sqlite:../data/food4thot```, which works in our local development environment and will have to be different when the solution is deployed elsewhere. Under ```src/test/resources``` the value is ```jdbc:sqlite::memory:``` so that we can use an in-memory database for unit testing. 
+
+1. We add a public constructor for class ```FoodStorage``` that takes a ```FoodieConfig``` as an argument, and change ```FoodRun``` to pass the value when instantiating ```FoodStorage```. 
+
+We could continue in this way to separate bits of logic so that they can be executed in isolation and unit tested. 
+
+
 
 ##---------- resume here ----------
-
-
-
-
-
-
-
-
-
 
 
 ## Resources for Working with Existing Codebases 

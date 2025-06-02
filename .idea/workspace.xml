@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Foodie_1 2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Foodie_1.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodie-solution/src/main/resources/foodie.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/food4thot" beforeDir="false" afterPath="$PROJECT_DIR$/data/food4thot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/presentation-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodRun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/Foodie.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/Foodie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/test/java/com/neopragma/foodiesolution/FoodieApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/test/java/com/neopragma/foodiesolution/FoodieApiTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodie-solution/src/test/resources/foodie.properties" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/test/resources/foodie.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/davidnicolette/Documents/Projects/java-unit-testing/rpngui",
+    "last_opened_file_path": "/Users/davidnicolette/Documents/Projects/java-unit-testing/foodie-solution/src/main/resources",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5126437",
@@ -59,6 +65,7 @@
       <recent name="com.neopragma.foodiesolution" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/foodie-solution/src/main/resources" />
       <recent name="$PROJECT_DIR$/rpngui" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
