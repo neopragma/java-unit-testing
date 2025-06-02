@@ -8,16 +8,16 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class Foodie_1 {
+public class Foodie {
 
     private final String baseURLString = "https://world.openfoodfacts.org/api/v0/product/%s";
     private HttpRequest request = null;
+    private FoodieConfig config = null;
 
-    Foodie_1(String productCode) {
+    Foodie(FoodieConfig config, String productCode) {
+        this.config = config;
         this.request = createRequest(productCode);
     }
-
-    protected Foodie_1() {}
 
     public String getProductInfo() {
         String body = null;
@@ -39,7 +39,7 @@ public class Foodie_1 {
         final HttpRequest request;
         request = HttpRequest.newBuilder()
                 .uri(URI.create(
-                        String.format(baseURLString,
+                        String.format(config.getAsString("base.uri"),
                                 URLEncoder.encode(productCode, StandardCharsets.UTF_8)
                         )))
                 .GET()
