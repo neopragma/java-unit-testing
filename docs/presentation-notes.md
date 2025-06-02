@@ -330,17 +330,47 @@ _These ideas are provided to help get things moving along in class, if necessary
 
 The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-1/```. 
 
-1. The constructor in ```Foodie.java``` creates the ```HttpRequest``` object to call the API. It is clumsy to isolate this logic to facilitate unit testing. In the sample solution, the logic is extracted into method ```createRequest()```, and the constructor calls that method. We need a do-nothing constructor for ```Foodie``` with ```package``` visibility so that we can exercise the ```createRequest()``` method in test cases. This is still suboptimal, but it is a reasonable first step.
-
-1. Added unit test cases for the ```createRequest()``` method in ```Foodie```. There are a couple of points to highlight for class participants. (1) We are not creating one test class for each production class. We are creating a test class for a concern or functional aspect of the solution, even if that concern is supported in multiple production classes. The first concern we're looking at is the functionality related to calling the external API. 
+1. Added unit test cases for the ```createRequest()``` method in ```Foodie```. There are a couple of points to highlight for class participants. (1) We are not creating one test class for each production class. We are creating a test class for a concern or functional aspect of the solution, even if that concern is supported in multiple production classes. The idea that there must be one test class for each production class is a common misconception by beginners. The first concern we're looking at is the functionality related to calling the external API. 
 
 #### Step 2 - externalize the URI for the food information API 
 
 The modified files for this step are in ```[project_root]/copy-paste/foodie-refactor-2/```.
 
-1. The hard-coded URI string in ```Foodie.java``` (named ```baseURLString```) could be externalized. We'll define a Java property for this in ```src/[main|test]/resources/foodie.properties```, property name ```base.uri```. Method ```createRequest()``` will then read this property to get the URI string.
+The hard-coded URI string in ```Foodie.java``` (named ```baseURLString```) could be externalized.
 
-Points to bring out for class participants: (1) Externalizing this value makes it possible to change it without having to re-build and re-package the entire application. (2) Externalizing the value enables us to inject test values in our test cases to exercise the production code more thoroughly. Otherwise, we would have to modify the production code in between tests, which would make it impractical to automate the test suite.
+Points to bring out for class participants: 
+- Externalizing this value makes it possible to change it without having to re-build and re-package the entire application. 
+- Externalizing the value enables us to inject test values in our test cases to exercise the production code more thoroughly. Otherwise, we would have to modify the production code in between tests, which would make it impractical to automate the test suite.
+- Since obtaining the URI string is a separate concern from the main functionality of the ```Foodie``` class, it makes sense to extract it in keeping with the fundamental software design principle, _separation of concerns_, and the derived OO design principle, _single responsibility principle_.
+- We're making some modifications to existing code that was designed monolithically, and we're also writing some greenfield code. This is an example of a case when we must make judgment calls about when to test-drive the code and when it isn't feasible or cost-effective to do so. Test-driving code is a baseline professional practice, so we need to have a defensible reason _not_ to test-drive.
+
+1.  We'll define a Java property for the base URI in ```src/[main|test]/resources/foodie.properties```, property name ```base.uri```. Method ```createRequest()``` will then read this property to get the URI string.
+
+1. We'll create a class that abstracts the details of working with external resource definitions and provides a simple api for application code. Since this is "fresh" code, there are no barriers to test-driving it and therefore no excuse for us _not_ to test-drive it. 
+
+1. We create a class under ```src/test/java``` in package ```com.neopragma.foodiesolution``` named ```ConfigurationTests```. This is another example of the fact we don't necessarily need or want a one-for-one correspondence between production source files and test source files. The test sources are organized around functionality or concerns rather than class structure. 
+
+1. The test cases will reflect our ideas for the internal api for retrieving configuration settings. This sort of thing usually exposes various methods to read, write, and reload configuration settings. For the moment, the only thing we need is a method to retrieve a string value. Let's call it ```getAsString(id)```. 
+
+1. The ```FoodieConfig``` instance will have to retrieve the data from an external resource before it can respond to any "get" calls. Since we don't want external dependencies in our unit tests, we'll need to inject a fake resource file. There are several ways to design this, and we don't want to go down a rabbit hole discussing them right now. The sample solution takes the approach of creating a Config instance on request using a factory method. So, it's _not_ a static "utilities" class and it's _not_ a singleton. We're going to instantiate ```FoodieConfig``` at the top level of the application - the ```FoodRun``` class - and pass it through to other classes that need it. 
+
+1. Our first test case drives out the code for the ```FoodieConfig``` class to read configuration values from the IOStream object we pass to the factory method. Testing the default behavior of reading a properties file from the default location, ```src/xxx/resources```, will happen at the _integration test_ level **and** not the _unit test_ level, since it involves an external resource...and we won't write that logic until we need to. 
+
+1. Now we can modify the ```Foodie``` class to use the new facility to retrieve the base URI. We can remove the instance variable ```baseURLString``` and change one line in method ```createRequest()``` to get the value from ```FoodieConfig```. We'll need the constructor to take a reference to a ```FoodieConfig``` instance as an argument so we can pass it from ```FoodRun```. We can also pass it from our test cases, so we can provide a fake one that doesn't incur any I/O overhead for test purposes. When we add the argument to the constructor declaration the IDE highlights the places in the code that are affected by the change. Most of them are in API test cases that don't need the configuration setting, so we can pass ```null``` there. 
+
+3. We also have to modify ```FoodRun``` to instantiate ```FoodieConfig``` and pass it to ```Foodie```. This change forces us to add logic to ```FoodieConfig``` for the default case, when it reads the properties file. We can't write a proper unit test case for this because the test case must access the external resource in order to be meaningful. So this is a situation where we choose to write production code before writing test cases. 
+
+#### Step 3 - 
+
+##---------- resume here ----------
+
+
+
+
+
+
+
+
 
 
 
