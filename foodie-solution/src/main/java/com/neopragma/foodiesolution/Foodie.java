@@ -12,12 +12,12 @@ public class Foodie {
 
     private final String baseURLString = "https://world.openfoodfacts.org/api/v0/product/%s";
     private HttpRequest request = null;
+    private FoodieConfig config = null;
 
-    Foodie(String productCode) {
+    Foodie(FoodieConfig config, String productCode) {
+        this.config = config;
         this.request = createRequest(productCode);
     }
-
-    protected Foodie() {}
 
     public String getProductInfo() {
         String body = null;
@@ -39,7 +39,7 @@ public class Foodie {
         final HttpRequest request;
         request = HttpRequest.newBuilder()
                 .uri(URI.create(
-                        String.format(baseURLString,
+                        String.format(config.getAsString("base.uri"),
                                 URLEncoder.encode(productCode, StandardCharsets.UTF_8)
                         )))
                 .GET()

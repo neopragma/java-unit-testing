@@ -10,7 +10,7 @@ public class FoodRun {
             System.out.println("Please provide a product code.");
             System.exit(1);
         }
-        Foodie foodie = new Foodie(productCode);
+        Foodie foodie = new Foodie(FoodieConfig.create(), productCode);
         String productInfoAsJSON = foodie.getProductInfo();
         FoodStorage foodStorage = new FoodStorage();
         foodStorage.store(productCode, productInfoAsJSON);
