@@ -449,9 +449,9 @@ _walk through the instructions and code and let the participants work on it_
 
 _Several LLM plugins are available for IntelliJ IDEA, but none is free. JetBrains AI Free comes bundled with the IDE, including the Community Edition, but the "free" part is only a 30-day trial. It comes with the Ultimate Edition under the name JetBrains AI Assistant, with all features enabled. Copilot is available as a plugin, but it requires a paid account through Google._ 
 
-_A crude workaround to avoid having to pay for anything is to open VSCode and use the included version of Copilot, then paste code into IDEA._
+_A crude workaround to avoid having to pay for anything is to open VSCode and use the included version of Copilot, then paste code into IDEA. (Or just use VSCode.)_
 
-_If you're doing this training for a corporate client, they may have (should have) obtained professional licenses for their employees, with LLM support included._ 
+_If you're doing this training for a corporate client, they may (should) have obtained professional licenses for their employees, with LLM support included._ 
 
 _Using whatever LLM option that's practical in your situation, demonstrate the process of defining the name formatter via copilot for English names_ 
 
@@ -465,7 +465,7 @@ A full Spanish name consists of the primer nombre, segundo nombre, primer appell
 
 It's a common convention to write the name as primer nombre, initial of the segundo nombre, primer appellido, and initial of the segundo appellido. 
 
-Use an AI coding assistant to enhance the previous solution per the instructions on the slide. 
+Use the same AI coding assistant (same session) to enhance the previous solution per the instructions on the slide. 
 
 ## When Unit Testing Is Not Useful
 
