@@ -399,7 +399,7 @@ Emily Bache based the Gilded Rose refactoring kata on previous work by Bobby Joh
 
 ## Techniques for Working with Existing Codebases 
 
-People have had to work with existing codebases for as long as software has existed. Some have come up with practical techniques that help us get started with it. 
+People have had to work with existing codebases for as long as software has existed. Well, _almost_ as long. Some have come up with practical techniques that help us get started with it. 
 
 I think Michael Feathers is the person who coined the term "seams" to refer to places in monolithic code where there's an obvious place to separate out some of the logic - for some definition of "obvious." 
 
@@ -454,6 +454,8 @@ _A crude workaround to avoid having to pay for anything is to open VSCode and us
 _If you're doing this training for a corporate client, they may have (should have) obtained professional licenses for their employees, with LLM support included._ 
 
 _Using whatever LLM option that's practical in your situation, demonstrate the process of defining the name formatter via copilot for English names_ 
+
+_The chat that happened when I was preparing this material is in ```docs/copilot-chat-for-name-formatter.txt```._
 
 ## Modifying Existing Code Using an LLM assistant 
 

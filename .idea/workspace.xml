@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/foodie-solution/src/main/resources/foodie.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/food4thot" beforeDir="false" afterPath="$PROJECT_DIR$/data/food4thot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/presentation-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/FoodStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/Foodie.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/main/java/com/neopragma/foodiesolution/Foodie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/test/java/com/neopragma/foodiesolution/FoodieApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/test/java/com/neopragma/foodiesolution/FoodieApiTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foodie-solution/src/test/resources/foodie.properties" beforeDir="false" afterPath="$PROJECT_DIR$/foodie-solution/src/test/resources/foodie.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
