@@ -653,13 +653,13 @@ During each run, the tool narrows down the number of test cases necessary to exe
 
 A PBT tool can almost always discover edge cases we didn't think of when we wrote our example-based tests. 
 
-##---------- RESUME HERE ----------
+####---------- PROBLEM START ----------
 
-Take a look at the file named test underscore rpn underscore props dot py in directory property underscore tests. 
+_I have not been able to run jqwik or junit-quickcheck to demonstrate PBT. If you can figure out a configuration that works, please share. In the meantime, all we can do with the present setup is show the source code and talk about it._
 
-PBT tools for some languages can be pretty complicated to use. Fortunately, pytest supports PBT in a relatively straightforward way. 
+_The PBT demo setup works for other languages. If you want to show participants what the output from a PBT tools typically looks like, run the sample in one of the other xxxx-unit-testing projects._
 
-_run the sample PBT tests_ 
+####---------- PROBLEM END ----------
 
 ### Mutation Testing
 
@@ -668,6 +668,8 @@ A mutation testing tool will modify conditional logic in the SUT to see if our u
 Any mutant that isn't detected by the unit test suite is said to have _survived_. Our goal is to ensure our unit test suite kills all mutants. 
 
 Mutation testing tools only work when the unit test suite is green - that is, all the test cases pass. 
+
+####---------- RESUME HERE ----------
 
 _demonstrate mutation testing_
 

@@ -1,0 +1,101 @@
+package com.neopragma.rpn;
+
+import net.jqwik.api.*;
+import net.jqwik.api.constraints.*;
+import static org.assertj.core.api.Assertions.*;
+
+public class RPNTest {
+
+    @Property
+    void enteringValidNumeralSetsTopOfStack(@DoubleRange(min = -1_000, max = 1_000) double num) {
+        RPN rpn = new RPN();
+        String result = rpn.enter(String.valueOf(num));
+        assertThat(result).isEqualTo(String.valueOf(num));
+    }
+
+    @Property
+    void additionWorksCorrectly(@ForAll("smallNumbers") double a, @ForAll("smallNumbers") double b) {
+        RPN rpn = new RPN();
+        rpn.enter(String.valueOf(a));
+        rpn.enter(String.valueOf(b));
+        String result = rpn.enter("+");
+        assertThat(Double.parseDouble(result)).isEqualTo(a + b);
+    }
+
+    @Property
+    void subtractionWorksCorrectly(@ForAll("smallNumbers") double a, @ForAll("smallNumbers") double b) {
+        RPN rpn = new RPN();
+        rpn.enter(String.valueOf(a));
+        rpn.enter(String.valueOf(b));
+        String result = rpn.enter("-");
+        assertThat(Double.parseDouble(result)).isEqualTo(a - b);
+    }
+
+    @Property
+    void multiplicationWorksCorrectly(@ForAll("smallNumbers") double a, @ForAll("smallNumbers") double b) {
+        RPN rpn = new RPN();
+        rpn.enter(String.valueOf(a));
+        rpn.enter(String.valueOf(b));
+        String result = rpn.enter("*");
+        assertThat(Double.parseDouble(result)).isEqualTo(a * b);
+    }
+
+    @Property
+    void divisionWorksCorrectly(@ForAll("smallNumbers") double a, @ForAll("nonZeroSmallNumbers") double b) {
+        RPN rpn = new RPN();
+        rpn.enter(String.valueOf(a));
+        rpn.enter(String.valueOf(b));
+        String result = rpn.enter("/");
+        assertThat(Double.parseDouble(result)).isCloseTo(a / b, within(1e-9));
+    }
+
+    @Property
+    void moduloWorksCorrectly(@ForAll("smallNumbers") double a, @ForAll("nonZeroSmallNumbers") double b) {
+        RPN rpn = new RPN();
+        rpn.enter(String.valueOf(a));
+        rpn.enter(String.valueOf(b));
+        String result = rpn.enter("%");
+        assertThat(Double.parseDouble(result)).isCloseTo(a % b, within(1e-9));
+    }
+
+    @Property
+    void powerWorksCorrectly(@ForAll("smallPositive") double base, @ForAll("smallPositive") double exp) {
+        RPN rpn = new RPN();
+        rpn.enter(String.valueOf(base));
+        rpn.enter(String.valueOf(exp));
+        String result = rpn.enter("p");
+        assertThat(Double.parseDouble(result)).isCloseTo(Math.pow(base, exp), within(1e-9));
+    }
+
+    @Property
+    void enteringInvalidInputThrowsException(@ForAll("invalidInputs") String input) {
+        RPN rpn = new RPN();
+        Throwable thrown = catchThrowable(() -> rpn.enter(input));
+        assertThat(thrown)
+            .isInstanceOf(IllegalArgumentException.class)
+            .hasMessageContaining("Unrecognized input value");
+    }
+
+    @Provide
+    Arbitrary<Double> smallNumbers() {
+        return Arbitraries.doubles().between(-1_000.0, 1_000.0);
+    }
+
+    @Provide
+    Arbitrary<Double> nonZeroSmallNumbers() {
+        return smallNumbers().filter(d -> Math.abs(d) > 1e-9);
+    }
+
+    @Provide
+    Arbitrary<Double> smallPositive() {
+        return Arbitraries.doubles().between(0.0, 10.0);
+    }
+
+    @Provide
+    Arbitrary<String> invalidInputs() {
+        return Arbitraries.strings()
+                .withCharRange('!', '~')
+                .ofMinLength(1).ofMaxLength(3)
+                .filter(s -> !s.matches("^-?\\d*\\.?\\d+$") && !s.matches("[+\\-*/%Pp]") && !s.equalsIgnoreCase("c"));
+    }
+}

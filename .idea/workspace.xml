@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4f810fe-0153-4d6d-943f-ceca9f8026e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/rpn/src/main/java/com/neopragma/rpn/jqwik-example-not-working.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpnprop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpnprop/src/main/java/com/neopragma/rpn/RPN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpnprop/src/test/java/com/neopragma/rpn/RPNTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/food4thot" beforeDir="false" afterPath="$PROJECT_DIR$/data/food4thot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/presentation-notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/presentation-notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpn/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpn/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +50,16 @@
   "keyToString": {
     "Application.FoodRun.executor": "Run",
     "Application.RPNConsole.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
     "JUnit.FoodieApiTests.the_HttpRequest_specifies_HTTP_version_1_1.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/davidnicolette/Documents/Projects/java-unit-testing/foodie-solution/src/main/resources",
+    "last_opened_file_path": "/Users/davidnicolette/Documents/Projects/java-unit-testing/foodie-solution",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5126437",
@@ -58,8 +71,13 @@
       <recent name="com.neopragma.foodiesolution" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/foodie-solution" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/foodie-solution/src/main/resources" />
       <recent name="$PROJECT_DIR$/rpngui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/rpn/src/test/java/com/neopragma/rpn" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.neopragma.foodiesolution" />
