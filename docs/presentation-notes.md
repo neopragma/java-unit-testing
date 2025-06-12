@@ -384,11 +384,6 @@ What we _don't_ want to do is depend on our tests for ```store()``` to set up th
 
 We could continue in this way to separate bits of logic so that they can be executed in isolation and unit tested. 
 
-
-
-##---------- resume here ----------
-
-
 ## Resources for Working with Existing Codebases 
 
 There are a lot of resources online and in print to help us with this problem. Here are a couple of the best ones. 
@@ -653,13 +648,7 @@ During each run, the tool narrows down the number of test cases necessary to exe
 
 A PBT tool can almost always discover edge cases we didn't think of when we wrote our example-based tests. 
 
-####---------- PROBLEM START ----------
-
-_I have not been able to run jqwik or junit-quickcheck to demonstrate PBT. If you can figure out a configuration that works, please share. In the meantime, all we can do with the present setup is show the source code and talk about it._
-
-_The PBT demo setup works for other languages. If you want to show participants what the output from a PBT tools typically looks like, run the sample in one of the other xxxx-unit-testing projects._
-
-####---------- PROBLEM END ----------
+_Demonstrate PBT tests in ```rpnprop```. Run ```mvn test```._
 
 ### Mutation Testing
 
@@ -705,7 +694,9 @@ Automated checks can catch many issues before they become problematic, but no fo
 
 And this is not something that should be set aside in favor of rapidly cranking out just one more User Story before the end of a Sprint. What's the use of delivering that User Story if it's only going to break the application because it wasn't sufficiently checked and tested? It's false economy.
 
+## Recap, retrospective, and quiz 
 
+_Recap the key learning points of the class and facilitate a brief retrospective to obtain feedback to improve the training. There are a few slides with questions and answers at the end of the deck you can walk through to reinforce some of the main points._
 
 
 

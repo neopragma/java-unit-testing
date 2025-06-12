@@ -160,41 +160,30 @@ cd [project-root/foodie]
 ```
 
 
-
-###---------- resume here ----------
-
-
-
-
-
 ### Run the property-based tests 
 
-```shell
-python3 -m pip install hypothesis
-``` 
+####---------- PROBLEM START ----------
 
-Sample property-based test:
+The sample property-based tests are not working in this project. 
 
-```shell 
-pytest property_tests
-```
+####---------- PROBLEM END ----------
+
 
 ### Run the mutation tests 
 
-```shell
-python3 -m pip install mutmut 
-``` 
-
-Run mutation tests
+Run mutation tests for the ```age``` module
 
 ```shell
-mutmut run
-
-mutmut browse 
-
-q
+cd [project-root]/age 
+mvn org.pitest:pitest-maven:mutationCoverage
 ``` 
 
-## Some resources
+Run mutation tests for the ```rpn``` module
 
-## Java jars used in this workshop 
+```shell
+cd [project-root]/age 
+mvn org.pitest:pitest-maven:mutationCoverage
+``` 
+
+_If no mutants survive, the sample unit tests are too good. Remove or ignore one or two of them to show what happens when mutants survive._
+
